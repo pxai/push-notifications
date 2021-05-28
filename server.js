@@ -25,32 +25,32 @@ app.use(bodyparser.json());
 app.use(express.static('public'));
 
 app.post('/add-subscription', (request, response) => {
-  console.log('/add-subscription');
+  console.log('/add-subscription'.green);
   console.log(request.body);
   response.sendStatus(200);
 });
 
 app.post('/remove-subscription', (request, response) => {
-  console.log('/remove-subscription');
+  console.log('/remove-subscription'.yellow);
   console.log(request.body);
   response.sendStatus(200);
 });
 
 app.post('/notify-me', (request, response) => {
-  console.log('/notify-me');
+  console.log('/notify-me'.green);
   console.log(request.body);
   response.sendStatus(200);
 });
 
 app.post('/notify-all', (request, response) => {
-  console.log('/notify-all');
+  console.log('/notify-all'.green);
   response.sendStatus(200);
 });
 
 app.get('/', (request, response) => {
-  response.sendFile(__dirname + '/views/index.html');
+  response.sendFile(__dirname + '/client/index.html');
 });
 
 const listener = app.listen(process.env.PORT, () => {
-  console.log(`Listening on port ${listener.address().port}`);
+  console.log(`Server on port ${listener.address().port}`.green);
 });
