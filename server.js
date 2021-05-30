@@ -22,7 +22,7 @@ function sendNotifications(subscriptions) {
 
 const app = express();
 app.use(bodyparser.json());
-app.use(express.static('public'));
+app.use(express.static('client'));
 
 app.post('/add-subscription', (request, response) => {
   console.log('/add-subscription'.green);
