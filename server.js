@@ -52,5 +52,6 @@ app.get('/', (request, response) => {
 });
 
 const listener = app.listen(process.env.PORT, () => {
+  console.log(`Vars: ${JSON.stringify(vapidDetails)}`);
   console.log(`Server on port ${listener.address().port}`.green);
 });
