@@ -47,7 +47,11 @@ app.post('/remove-subscription', (request, response) => {
 
 app.post('/notify-me', (request, response) => {
   console.log('/notify-me'.green);
-  console.log(request.body);
+  console.log('Request: ', request.body);
+  console.log(`Notifying ${request.body.endpoint}`);
+  const subscription =
+      db.get('subscriptions').find({endpoint: request.body.endpoint}).value();
+  sendNotifications([subscription]);
   response.sendStatus(200);
 });
 
