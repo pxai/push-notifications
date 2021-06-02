@@ -19,6 +19,32 @@ db.defaults({
 
 function sendNotifications(subscriptions) {
   console.log('sending notification: '.green);
+  // Create the notification content.
+  const notification = JSON.stringify({
+    title: "Hello, Notifications!",
+    options: {
+      body: `ID: ${Math.floor(Math.random() * 100)}`
+    }
+  });
+  // And provide authentication information.
+  const options = {
+    TTL: 10000,
+    vapidDetails: vapidDetails
+  };
+// Send a push message to each client specified in the subscriptions array.
+subscriptions.forEach(subscription => {
+  const endpoint = subscription.endpoint;
+  const id = endpoint.substr((endpoint.length - 8), endpoint.length);
+  webpush.sendNotification(subscription, notification, options)
+    .then(result => {
+      console.log(`Endpoint ID: ${id}`);
+      console.log(`Result: ${result.statusCode}`);
+    })
+    .catch(error => {
+      console.log(`Endpoint ID: ${id}`);
+      console.log(`Error: ${error} `);
+    });
+});
 }
 
 const app = express();
@@ -57,7 +83,16 @@ app.post('/notify-me', (request, response) => {
 
 app.post('/notify-all', (request, response) => {
   console.log('/notify-all'.green);
-  response.sendStatus(200);
+  console.log('Request: ', request.body);
+  console.log('Notifying all subscribers');
+  const subscriptions =
+      db.get('subscriptions').cloneDeep().value();
+  if (subscriptions.length > 0) {
+    sendNotifications(subscriptions);
+    response.sendStatus(200);
+  } else {
+    response.sendStatus(409);
+  }
 });
 
 app.get('/', (request, response) => {
