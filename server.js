@@ -5,6 +5,7 @@ const bodyparser = require('body-parser');
 const low = require('lowdb');
 const FileSync = require('lowdb/adapters/FileSync');
 const adapter = new FileSync('.data/db.json');
+require('dotenv').config();
 const db = low(adapter);
 const PORT = 4000;
 const vapidDetails = {
@@ -100,6 +101,7 @@ app.get('/', (request, response) => {
 });
 
 const listener = app.listen(PORT, () => {
+  console.log(`Vars: process: ${process.env.VAPID_SUBJECT}`);
   console.log(`Vars: ${JSON.stringify(vapidDetails)}`);
   console.log(`Server on port ${listener.address().port}`.green);
 });
