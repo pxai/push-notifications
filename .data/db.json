@@ -1,11 +1,11 @@
 {
   "subscriptions": [
     {
-      "endpoint": "https://fcm.googleapis.com/fcm/send/dPp28CqyWts:APA91bGPzOOOW4p29I4ned8FxLusmEA-glnRJKJP6AE7URmP0rVPkVyyJkFhNNcoSvZAhuvqtFaLXATIyDg3wPk2pNX_QTfhpELFE-V1Eo5HwHlt_FKUBNPDCG82V5I0Isz91fzwo6Zu",
+      "endpoint": "https://fcm.googleapis.com/fcm/send/fZMnss40mrE:APA91bEwzAiuDS60S55cJBwgkcxZiM76mxte1FJaNMGX5ZkQ97HyDClqYLV_iVkl5s9olP0z93jyiWAun6I6sBCq0Z56pUsNB4VLskevYiIlUpn5zMec9MSatPVY06rA73KX86VoSfhF",
       "expirationTime": null,
       "keys": {
-        "p256dh": "BJl4mCdGq0QEYIRvRLgOc5RRREmJNzCHBmfBWOFFhrLHwdW6o-TDWmTwamSY3_RoIjRyQpanKO93CaRN2iutq54",
-        "auth": "tHuBkNDp3lTI2hcWfsXNSg"
+        "p256dh": "BANGNFkJ7p2hTbEUlCknleZbLZnqcrAXBj72lUhq3FTsIfrRtTqqCfqeWfDeR17LyIekJLizwgMOtH10XKwRhk8",
+        "auth": "3lRZhRgWjSKbHKuTd-Nd-g"
       }
     }
   ]
