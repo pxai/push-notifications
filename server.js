@@ -39,6 +39,7 @@ subscriptions.forEach(subscription => {
   webpush.sendNotification(subscription, notification, options)
     .then(result => {
       console.log(`Endpoint ID: ${id}`);
+      console.log(`Notification: ${notification}`);
       console.log(`Result: ${result.statusCode}`);
     })
     .catch(error => {
