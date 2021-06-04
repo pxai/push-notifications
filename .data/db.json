@@ -1,11 +1,19 @@
 {
   "subscriptions": [
     {
-      "endpoint": "https://fcm.googleapis.com/fcm/send/fZMnss40mrE:APA91bEwzAiuDS60S55cJBwgkcxZiM76mxte1FJaNMGX5ZkQ97HyDClqYLV_iVkl5s9olP0z93jyiWAun6I6sBCq0Z56pUsNB4VLskevYiIlUpn5zMec9MSatPVY06rA73KX86VoSfhF",
+      "endpoint": "https://fcm.googleapis.com/fcm/send/fsxn8YJfAHw:APA91bEeMiZOQBkRqoXsfgV_SM4UnD_j3G-UVxo2xZ9yg4P89UBGWTZGP3nTo-Y-Vxb4LJw2RXb0_Ozz5N75Lo1QDwZqv88kY_DGusYfKgniDteebuexkL7NKCSZ-_XwJxBAyhXbnNgJ",
       "expirationTime": null,
       "keys": {
-        "p256dh": "BANGNFkJ7p2hTbEUlCknleZbLZnqcrAXBj72lUhq3FTsIfrRtTqqCfqeWfDeR17LyIekJLizwgMOtH10XKwRhk8",
-        "auth": "3lRZhRgWjSKbHKuTd-Nd-g"
+        "p256dh": "BAJtnkRBwJ7Vr2vOU3xqEkoP68qXJjHblRLlm7AJi-7JEqYP4ANOtW5JL3_nHgCFGlh2Ghyw50kDULoS0QuM9M0",
+        "auth": "pF2gc6yTVE34X3o2BWB4dQ"
+      }
+    },
+    {
+      "endpoint": "https://fcm.googleapis.com/fcm/send/fsxn8YJfAHw:APA91bEeMiZOQBkRqoXsfgV_SM4UnD_j3G-UVxo2xZ9yg4P89UBGWTZGP3nTo-Y-Vxb4LJw2RXb0_Ozz5N75Lo1QDwZqv88kY_DGusYfKgniDteebuexkL7NKCSZ-_XwJxBAyhXbnNgJ",
+      "expirationTime": null,
+      "keys": {
+        "p256dh": "BAJtnkRBwJ7Vr2vOU3xqEkoP68qXJjHblRLlm7AJi-7JEqYP4ANOtW5JL3_nHgCFGlh2Ghyw50kDULoS0QuM9M0",
+        "auth": "pF2gc6yTVE34X3o2BWB4dQ"
       }
     }
   ]
