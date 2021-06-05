@@ -18,7 +18,7 @@ async function subscribeToPush() {
     userVisibleOnly: true,
     applicationServerKey: urlB64ToUint8Array(VAPID_PUBLIC_KEY)
   });
-  postToServer('/add-subscription', subscription);
+  postToServer('/add', subscription);
   console.log("Subscribed to post");
 }
 
@@ -83,6 +83,7 @@ const urlB64ToUint8Array = (base64String) => {
 };
 
 async function postToServer(url, data) {
+  url = 'http://localhost:3000/api/v1/notifications' + url;
   let response = await fetch(url, {
     method: 'POST',
     headers: {
